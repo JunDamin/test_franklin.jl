@@ -1,0 +1,50 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Install python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - run: pip install matplotlib
+    - name: Install deps for TikzCD
+      run: |
+          sudo add-apt-repository ppa:jonathonf/texlive-2019
+          sudo apt-get -qq update
+          sudo apt install -y pdf2svg texlive-latex-base texlive-binaries texlive-pictures texlive-latex-extra texlive-luatex
+    - name: Install Julia
+      uses: julia-actions/setup-julia@v1
+      with:
+        version: 1.5
+    - run: julia -e '
+            using Pkg;
+            Pkg.add(Pkg.PackageSpec(name="NodeJS"));
+            using NodeJS;
+            run(`$(npm_cmd()) install lunr`);
+            run(`$(npm_cmd()) install cheerio`);
+            Pkg.add(Pkg.PackageSpec(name="Franklin", rev="master"));
+            using Franklin;
+            cd("docs");
+            Pkg.activate("."); Pkg.instantiate();
+            serve(single=true, cleanup=false); lunr(); optimize(minify=false, prerender=false);
+            cd("../demos");
+            Pkg.activate("."); Pkg.instantiate();
+            optimize(prerender=false);
+            dst = "../docs/__site/demos";
+            mkpath(dst);
+            foreach(p -> cp("__site/$p", "$dst/$p"), readdir("__site"));'
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs/__site

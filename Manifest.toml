@@ -1,5 +1,10 @@
 # This file is machine-generated - editing it directly is not advised
 
+[[AbstractTrees]]
+git-tree-sha1 = "03e0550477d86222521d254b741d470ba17ea0b5"
+uuid = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
+version = "0.3.4"
+
 [[Adapt]]
 deps = ["LinearAlgebra"]
 git-tree-sha1 = "84918055d15b3114ede17ac6a7182f68870c16f7"
@@ -828,6 +833,12 @@ deps = ["Random", "Test"]
 git-tree-sha1 = "7c53c35547de1c5b9d46a4797cf6d8253807108c"
 uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 version = "0.9.5"
+
+[[TypeTree]]
+deps = ["InteractiveUtils"]
+git-tree-sha1 = "60aa90d32c56aa630da2b5d893846e3de05c2864"
+uuid = "04da0e3b-1cad-4b2c-a963-fc1602baf1af"
+version = "0.1.0"
 
 [[URIParser]]
 deps = ["Unicode"]

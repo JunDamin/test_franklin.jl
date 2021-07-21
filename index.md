@@ -10,6 +10,11 @@ Guides and Tips
 
 ## Visualization
 
+### VegaLite
+
+* [iris data analysis](visualization/iris_data_analysis)
+* [Julia Types](guides/julia_types)
+
 ## Data Processing
 
 ## Data Modelling

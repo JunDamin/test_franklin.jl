@@ -1,0 +1,48 @@
+AbstractMatrix{T} where T
+├─ ReinterpretArray{T, 2, S, A, IsReshaped} where {T, S, A<:(AbstractArray{S, N} where N), IsReshaped}
+├─ ReshapedArray{T, 2, P, MI} where {T, P<:AbstractArray, MI<:Tuple{Vararg{SignedMultiplicativeInverse{Int64}, N} where N}}
+├─ SCartesianIndices2
+├─ BitMatrix
+├─ CartesianIndices{2, R} where R<:Tuple{OrdinalRange{Int64, Int64}, OrdinalRange{Int64, Int64}}
+├─ BitArray{2}
+├─ LinearIndices{2, R} where R<:Tuple{AbstractUnitRange{Int64}, AbstractUnitRange{Int64}}
+├─ DataValueMatrix{T} where T
+├─ DenseMatrix{T} where T
+│  ├─ Const{T, 2} where T
+│  ├─ Matrix{T} where T
+│  ├─ SharedMatrix{T} where T
+│  └─ Dense
+├─ EigenQ
+├─ HermitianRFP
+├─ HessenbergMatrix
+├─ TriangularRFP
+├─ AbstractQ
+│  ├─ HessenbergQ
+│  ├─ QRCompactWYQ
+│  ├─ QRPackedQ
+│  └─ QRSparseQ
+├─ AbstractTriangular
+│  ├─ LowerTriangular
+│  ├─ UnitLowerTriangular
+│  ├─ UnitUpperTriangular
+│  └─ UpperTriangular
+├─ Adjoint
+├─ Bidiagonal
+├─ Diagonal
+├─ Hermitian
+├─ LQPackedQ
+├─ SymTridiagonal
+├─ Symmetric
+├─ Transpose
+├─ Tridiagonal
+├─ UpperHessenberg
+├─ LinearIndices{2, R} where R<:Tuple{AbstractUnitRange{Int64}, AbstractUnitRange{Int64}}
+├─ PermutedDimsArray{T, 2, perm, iperm, AA} where {T, perm, iperm, AA<:AbstractArray}
+├─ AbstractSparseMatrix{Tv, Ti} where {Tv, Ti}
+│  ├─ AbstractSparseMatrixCSC
+│  │  └─ SparseMatrixCSC
+│  └─ Sparse
+├─ SubArray{T, 2, P, I, L} where {T, P, I, L}
+├─ FactorComponent
+├─ GenericArray{T, 2} where T
+└─ StringArray{T, 2} where T

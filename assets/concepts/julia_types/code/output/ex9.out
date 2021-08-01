@@ -1,0 +1,48 @@
+AbstractMatrix{T} where T
+ ├─ Base.ReinterpretArray{T, 2, S, A, IsReshaped} where {T, S, A<:(AbstractArray{S, N} where N), IsReshaped}
+ ├─ Base.ReshapedArray{T, 2, P, MI} where {T, P<:AbstractArray, MI<:Tuple{Vararg{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}, N} where N}}
+ ├─ Base.SCartesianIndices2
+ ├─ BitMatrix
+ ├─ CartesianIndices{2, R} where R<:Tuple{OrdinalRange{Int64, Int64}, OrdinalRange{Int64, Int64}}
+ ├─ Core.Compiler.BitArray{2}
+ ├─ Core.Compiler.LinearIndices{2, R} where R<:Tuple{Core.Compiler.AbstractUnitRange{Int64}, Core.Compiler.AbstractUnitRange{Int64}}
+ ├─ DataValues.DataValueMatrix{T} where T
+ ├─ DenseMatrix{T} where T
+ │   ├─ Base.Experimental.Const{T, 2} where T
+ │   ├─ Matrix{T} where T
+ │   ├─ SharedArrays.SharedMatrix{T} where T
+ │   └─ SuiteSparse.CHOLMOD.Dense
+ ├─ GenericLinearAlgebra.EigenQ
+ ├─ GenericLinearAlgebra.HermitianRFP
+ ├─ GenericLinearAlgebra.HessenbergMatrix
+ ├─ GenericLinearAlgebra.TriangularRFP
+ ├─ LinearAlgebra.AbstractQ
+ │   ├─ LinearAlgebra.HessenbergQ
+ │   ├─ LinearAlgebra.QRCompactWYQ
+ │   ├─ LinearAlgebra.QRPackedQ
+ │   └─ SuiteSparse.SPQR.QRSparseQ
+ ├─ LinearAlgebra.AbstractTriangular
+ │   ├─ LinearAlgebra.LowerTriangular
+ │   ├─ LinearAlgebra.UnitLowerTriangular
+ │   ├─ LinearAlgebra.UnitUpperTriangular
+ │   └─ LinearAlgebra.UpperTriangular
+ ├─ LinearAlgebra.Adjoint
+ ├─ LinearAlgebra.Bidiagonal
+ ├─ LinearAlgebra.Diagonal
+ ├─ LinearAlgebra.Hermitian
+ ├─ LinearAlgebra.LQPackedQ
+ ├─ LinearAlgebra.SymTridiagonal
+ ├─ LinearAlgebra.Symmetric
+ ├─ LinearAlgebra.Transpose
+ ├─ LinearAlgebra.Tridiagonal
+ ├─ LinearAlgebra.UpperHessenberg
+ ├─ LinearIndices{2, R} where R<:Tuple{AbstractUnitRange{Int64}, AbstractUnitRange{Int64}}
+ ├─ PermutedDimsArray{T, 2, perm, iperm, AA} where {T, perm, iperm, AA<:AbstractArray}
+ ├─ SparseArrays.AbstractSparseMatrix{Tv, Ti} where {Tv, Ti}
+ │   ├─ SparseArrays.AbstractSparseMatrixCSC
+ │   │   └─ SparseArrays.SparseMatrixCSC
+ │   └─ SuiteSparse.CHOLMOD.Sparse
+ ├─ SubArray{T, 2, P, I, L} where {T, P, I, L}
+ ├─ SuiteSparse.CHOLMOD.FactorComponent
+ ├─ Test.GenericArray{T, 2} where T
+ └─ WeakRefStrings.StringArray{T, 2} where T

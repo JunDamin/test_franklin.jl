@@ -1,22 +1,14 @@
 @def title = "Main"
 @def tags = ["syntax", "code"]
 
-@@main
-Data Science for All
-@@
-# Main topics
+# Blog Topics
 
-Guides and Tips
+This blog is about data sicence and its practices.
 
-## Visualization
+## [Concepts of Data Science](concepts)
 
-### VegaLite
+post of concepts and ideas of data science
 
-* [iris data analysis](visualization/iris_data_analysis)
-* [Julia Types](guides/julia_types)
+## [Practical cases of Data Science](practices)
 
-## Data Processing
-
-## Data Modelling
-
-
+posts of pratical cases of data science

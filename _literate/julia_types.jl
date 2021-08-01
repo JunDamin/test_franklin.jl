@@ -1,5 +1,3 @@
-# # Julia's Types
-
 # One of the Julia's key features is based on its type system.
 # You can create and commpute with custom types without any overhead.
 

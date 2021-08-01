@@ -328,17 +328,3 @@ code {
   border-radius: 0 10px 10px 0;
   border-left: 5px solid #4c9cf1;
 }
-
-.franklin-content .main {
-  background-image: url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
-  background-position: center;
-  width: 800px;
-  height: 300px;
-  border: none;
-  font-size: 3rem;
-  text-align:right;
-  -ms-text-size-adjust:  auto;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  color: hsl(0, 20%, 30%);
-}

@@ -3,73 +3,79 @@
 
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/how_to_start_franklin/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/etc/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/GLM/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/menu3/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/iris_data_analysis/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/julia_types/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/bootstraping/index.html</loc>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/data_voyager/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/sir_model/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/concepts/julia_dates/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/404/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -81,19 +87,31 @@
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/usingVSCode/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/menu1/index.html</loc>
-    <lastmod>2021-08-01</lastmod>
+    <lastmod>2021-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/notebooks/SIR_model/</loc>
+    <lastmod>2021-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/notebooks/Ch7_Bootstraping/</loc>
+    <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>

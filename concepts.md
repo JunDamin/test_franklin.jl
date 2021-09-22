@@ -4,22 +4,20 @@
 ## Techniques
 * [Boot starping](bootstraping)
 
-## Programming Language
+## Computer & Computational Science
 
-Development of computer and its application of mathimetical ideas are one of the main reasons that emerging of data science.
+데이터 사이언스에서 가장 중요한 도구인 컴퓨터와 관련된 개념을 정리하는 공간입니다.
 
-### Julia  
+### Julia language  
 * [Julia Types](julia_types)
-
-## Cycle of Data Science Project
-
-### Defining Problem
-
-### Data Collecting
-
-### Data Processing
-
 * [date with timezone](julia_dates)
+
+## Statistical Rethinking
+
+Statistical Rethinking을 읽고 생각한 것들을 정리하는 공간힙니다.
+
+* [DAG와 인과추론](DAG_and_inference)
+
 
 ### Data Modelling
 

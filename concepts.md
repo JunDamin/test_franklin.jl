@@ -2,7 +2,7 @@
 @def tags = ["syntax", "code"]
 
 ## Techniques
-* [Boot starping](bootstraping)
+* [Boot straping](bootstraping)
 
 ## Computer & Computational Science
 

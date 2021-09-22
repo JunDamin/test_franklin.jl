@@ -9,4 +9,4 @@
 * [data voyager](data_voyager)
 
 ## Modeling
-* [SIR model with Agents.jl](SIR_model)
+* [SIR model with Agents.jl](sir_model)

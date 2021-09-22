@@ -2,6 +2,4 @@
 @def title = "SIR model"
 @def tags = ["syntax", "code"]
 
-~~~
-{{insert ../notebooks/SIR_model.html}}
-~~~
+[SIR model](practices/images/test.gif)

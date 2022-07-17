@@ -56,6 +56,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/gdp_vs_emission_by_world/index.html</loc>
+    <lastmod>2022-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/data_voyager/index.html</loc>
     <lastmod>2022-07-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -63,6 +69,12 @@
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/practices/sir_model/index.html</loc>
+    <lastmod>2022-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/gdp_vs_vulnerability/index.html</loc>
     <lastmod>2022-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -81,6 +93,12 @@
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/404/index.html</loc>
+    <lastmod>2022-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/gdp_vs_emission_by_income_group/index.html</loc>
     <lastmod>2022-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -105,6 +123,12 @@
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/menu1/index.html</loc>
+    <lastmod>2022-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/franklin/disaster/index.html</loc>
     <lastmod>2022-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

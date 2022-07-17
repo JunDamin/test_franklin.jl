@@ -3,31 +3,31 @@
 
 you can read data using vega dataset
 
-```julia:ex1
+````julia:ex1
 using VegaDatasets
 data = dataset("iris")
 print(data)
 
 # Plot data
-```
+````
 
 using graph, it become much easier to find pattern from data.
 
 You can plot using VegaLite.
 In Julia, `:` means symbolifying such as `:sepalLength` which is not variable, it is a name of variable.(I am sure but it seems to work like a pointer.)
 
-```julia:ex2
+````julia:ex2
 using VegaLite
 p = data |> @vlplot(:point, x=:sepalLength, y=:sepalWidth, color=:species)
 
 save(joinpath(@OUTPUT, "plot.svg"), p)  # hide
-```
+````
 
 \fig{plot}
 
 Plotting pairs is much easier because you can see all data at once.
 
-```julia:ex3
+````julia:ex3
 p = data |>
     @vlplot(
         repeat={
@@ -43,7 +43,7 @@ p = data |>
     )
 
 save(joinpath(@OUTPUT, "plot2.svg"), p)  # hide
-```
+````
 
 \fig{plot2}
 

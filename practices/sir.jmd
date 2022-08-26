@@ -1,0 +1,138 @@
+```julia;
+using Downloads, DataFrames, CSV, Chain, Dates
+url = "https://data.brasil.io/dataset/covid19/caso_full.csv.gz"
+file = Downloads.download(url)
+df = CSV.File(file) |> DataFrame
+br = @chain df begin
+    filter([:date, :city] => (date, city) -> date < Dates.Date("2021-01-01") && date > Dates.Date("2020-04-01") && ismissing(city), _)
+    groupby(:date)
+    combine(
+        [:estimated_population_2019,
+         :last_available_confirmed_per_100k_inhabitants,
+         :last_available_deaths,
+         :new_confirmed,
+         :new_deaths] .=> sum .=>
+         [:estimated_population_2019,
+         :last_available_confirmed_per_100k_inhabitants,
+         :last_available_deaths,
+         :new_confirmed,
+         :new_deaths]
+    )
+end;    
+```
+
+Let's take a look in the first observations
+
+```julia;
+first(br,  5)
+```
+
+Also the bottom CSV.Rows
+```julia;
+last(br, 5)
+```
+
+Here is a plot of the DataFrames._broadcast_unalias_helper
+```julia;
+using Plots, StatsPlots, LaTeXStrings
+
+@df br plot(:date, 
+            :new_confirmed,
+            xlab=L"t", ylab="infected daily",
+            yformatter=y -> string(round(Int64, y/1_000))*"K",
+            label=false)
+```
+
+### How to code an ODE in Julia?
+
+```julia;
+using DifferentialEquations
+
+function sir_ode!(du, u, p, t)
+    (S, I, R) = u
+    (β, γ) = p
+    N = S + I + R
+    infection = β * I * S / N
+    recovery = γ * I
+    @inbounds begin
+        du[1] = -infection # Susceptible
+        du[2] = infection - recovery  # Infected
+        du[3] = recovery  # Recovered
+    end
+    nothing
+end
+```
+Test
+
+```julia;
+
+i′ = first(br[:, :new_confirmed])
+N = maximum(br[:, :estimated_population_2019])
+
+u = [N - i′, i′, 0.0]
+p = [0.5, 0.05]
+prob = ODEProblem(sir_ode!, u, (1.0, 100.0), p)
+sol_ode = solve(prob)
+plot(sol_ode, label=[L"S", L"I", L"R"],
+    lw=3,
+    xlabel=L"t",
+    ylabel=L"N",
+    yformatter=y -> string(round(Int64, y ÷ 1_000_000))*"mi",
+    title="SIR Model for 100 days, β = $(p[1]), γ = $(p[2])")
+```
+
+### Bayesian Regression with Count Data
+
+
+```julia
+function NegativeBinomial2(μ, ζ)
+    p = 1/ (1+μ/ζ)
+    r = ζ
+    return NegativeBinomial(r, p)
+end
+```
+
+```julia;
+using Turing
+using LazyArrays
+using Random:seed!
+seed!(123)
+
+@model function bayes_sir(infected, i′, r′, N)
+    # calculate number of timepoints
+    l = length(infected)
+
+    # priors
+    β ~ TruncatedNormal(2, 1, 1e-4, 10) # using 10 because numerical issues arose
+    γ ~ TruncatedNormal(0.4, 0.5, 1e-4, 10) # using 10 because numerical issues arose
+    δ′ ~ truncated(Exponential(5); lower=0, upper=1e5)
+    δ = 1.0 / δ′
+
+    # ODE stuff
+    I = i′
+    u0 = [N - I, I, r′] # S, I, R
+    p = [β, γ]
+    tspan = (1.0, float(l))
+    prob = ODEProblem(sir_ode!,
+        u0,
+        tspan,
+        p)
+    sol = solve(prob, 
+        Tsit5(), # similar to Dormand-Prince RK45 in Stan but 20% faster
+        saveat=1.0)
+    sol′ = Array(sol)[2, :]  # New Infected
+    sol′ = max.(1e-4, sol′)  # numerical issues arose
+
+    # likelihood
+    infected ~ arraydist(LazyArray(@~ NegativeBinomial2.(sol′, δ)))
+end;
+
+```
+
+```julia;
+infected = br[:, :new_confirmed]
+r′ = first(br[:, :new_deaths])
+model_sir = bayes_sir(infected, i′, r′, N)
+chain_sir = sample(model_sir, NUTS(), 2_000)
+summarystats(chain_sir[[:β, :γ]])
+```

@@ -1,0 +1,7 @@
+[deps]
+BSplines = "488c2830-172b-11e9-1591-253b8a7df96d"
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
+StatisticalRethinking = "2d09df54-9d0f-5258-8220-54c2a3d4fbee"
+StatisticalRethinkingPlots = "e1a513d0-d9d9-49ff-a6dd-9d2e9db473da"
+StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
+Turing = "fce5fe82-541a-59a6-adf8-730c64b5f9a0"

@@ -1,0 +1,38 @@
+# Using Weave may be the funny way to work with writing books.
+
+I believe one of the way to write article is write markdown.
+It may give us great productivity by neglecting unnecessary details.
+
+Abstraction is the key to productivity. As you may have heard of templates, 
+many work done in our daily life can be decomposed by several simple parts.
+As Taylor observed labor workers, we may see the similar thing in
+how knowledge workers do their works.
+
+Why I like markdown? I think because I can focus on contents not the visualization.
+And also it is much easier to change the format than other options.
+
+However their is one downside of markdown. One of the downside of markdown is tables and size of graphics.
+You will see the fitting plots in markdown is not easy.
+
+You may also think about other ideas. 
+jupyter notebook is also pretty easy to do, but i found out that sometimes
+the cell blocks are not easy to handle.
+
+I love to do with weave because it is easy to write and also easy to run code.
+It feel like using REPL. I can check the result of my code and modify it.
+
+```julia
+a = [1 2 3]
+b = [2; 4; 6]
+```
+
+One good part of julia is that you can see the result of lines.
+So you can focus on writing and also other stuffs.
+
+One thing that I learn these few days, that it is not easy to set environments.
+So I really wanted to know how set a environments.
+
+I may able to write a book with this weave.jl 
+
+It is pretty fun to do.
+
